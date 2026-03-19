@@ -5,9 +5,9 @@
     "main": "src/index.js",
     "type": "module",
     "scripts": {
-        "start": "node --env-file=.env src/index.js",
-        "dev": "node --env-file=.env src/index.js",
-        "seed": "node --env-file=.env scripts/seedSchemes.js"
+        "start": "node src/index.js",
+        "dev": "node --watch src/index.js",
+        "seed": "node scripts/seedSchemes.js"
     },
     "dependencies": {
         "@google/generative-ai": "^0.24.1",

@@ -1,6 +1,6 @@
 # Shram Saathi
 
-Shram Saathi is a voice-first AI assistant for Hindi-speaking gig and informal workers in India. It leverages STT/TTS (Sarvam AI), LLM answering (Gemini 1.5 Flash), Vector Retrieval (Supabase pgvector) for government schemes, and Live Weather features (Open-Meteo).
+Shram Saathi is a voice-first AI assistant for Hindi-speaking gig and informal workers in India. It leverages STT/TTS (Sarvam AI), LLM answering (Gemini 2.5 Flash), Real-Time Web Search (Tavily API) for live government schemes, and Live Weather features (Open-Meteo).
 
 ## Architecture
 - **Frontend**: React 18 + Vite + Tailwind CSS (Deployed on Vercel)
@@ -9,9 +9,10 @@ Shram Saathi is a voice-first AI assistant for Hindi-speaking gig and informal w
 
 ## Prerequisites
 You will need the following API Keys:
-1. **Sarvam AI API Key** (`SARVAM_API_KEY`) form app.sarvam.ai
+1. **Sarvam AI API Key** (`SARVAM_API_KEY`) from app.sarvam.ai
 2. **Google AI Studio API Key** (`GEMINI_API_KEY`) from aistudio.google.com
 3. **Supabase URL & Anon Key** (`SUPABASE_URL`, `SUPABASE_ANON_KEY`) from supabase.com
+4. **Tavily Search API Key** (`TAVILY_API_KEY`) from tavily.com for real-time scheme web search.
 
 ## Local Setup Instructions (Under 10 Steps)
 
@@ -23,8 +24,8 @@ You will need the following API Keys:
    - Fill in all the API keys in your `.env` file.
 4. **Install Backend Dependencies**:
    - While still in `backend/`, run `npm install`.
-5. **Seed the Government Schemes Database** (One-time):
-   - Run `npm run seed`. This will scrape myscheme.gov.in and store chunks natively in Supabase via Gemini embeddings.
+5. **Automatic Live Crawling** (No Seeding Needed):
+   - The application uses Tavily to instantly crawl `mygov.in` and `myscheme.gov.in` when users ask about schemes. You do not need to run the old cron scrapers.
 6. **Start the Backend Server**:
    - Run `npm run dev` or `npm start`. It will run on port `5000`.
 7. **Configure Frontend Environment**:

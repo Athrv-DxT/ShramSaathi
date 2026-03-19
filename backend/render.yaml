@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: shram-saathi-backend
+    env: node
+    plan: free
+    region: singapore # Adjust as preferred
+    buildCommand: npm install
+    startCommand: npm start
+    branch: main
+    envVars:
+      - key: NODE_VERSION
+        value: "20.x"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false

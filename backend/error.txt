@@ -1,0 +1,52 @@
+﻿node : file:///D:/shram
+saathi/backend/node_mod
+ules/@google/genai/dist
+/node/index.mjs:20333
+At line:1 char:1
++ node src/index.js 
+2>&1 | Out-File 
+-Encoding utf8 
+error.txt
++ 
+~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (file:///D:/sh   
+ ra...index.mjs:203    
+33:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+        if 
+((options.project || 
+options.location) && 
+options.apiKey) {
+                     ^
+
+TypeError: Cannot read 
+properties of 
+undefined (reading 
+'project')
+    at new GoogleGenAI 
+(file:///D:/shramsaathi
+/backend/node_modules/@
+google/genai/dist/node/
+index.mjs:20333:22)
+    at file:///D:/shram
+saathi/backend/src/serv
+ices/gemini.js:4:12
+    at ModuleJob.run (n
+ode:internal/modules/es
+m/module_job:271:25)
+    at async onImport.t
+racePromise.__proto__ (
+node:internal/modules/e
+sm/loader:547:26)
+    at async asyncRunEn
+tryPointWithESMLoader (
+node:internal/modules/r
+un_main:116:5)
+
+Node.js v22.12.0

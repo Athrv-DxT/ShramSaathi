@@ -1,0 +1,70 @@
+﻿node : API key should 
+be set when using the 
+Gemini API.
+At line:1 char:1
++ node src/index.js 
+2>&1 | Out-File 
+-Encoding utf8 
+error3.txt
++ 
+~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (API key shoul   
+ d ...the Gemini AP    
+I.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+API key should be set 
+when using the Gemini 
+API.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ≡ƒöÉ prevent building .env in docker: https://dotenvx.com/prebuild
+file:///D:/shramsaathi/
+backend/node_modules/@s
+upabase/supabase-js/dis
+t/index.mjs:150
+	if (!trimmedUrl) 
+throw new 
+Error("supabaseUrl is 
+required.");
+	                      
+ ^
+
+Error: supabaseUrl is 
+required.
+    at 
+validateSupabaseUrl (fi
+le:///D:/shramsaathi/ba
+ckend/node_modules/@sup
+abase/supabase-js/dist/
+index.mjs:150:25)
+    at new 
+SupabaseClient (file://
+/D:/shramsaathi/backend
+/node_modules/@supabase
+/supabase-js/dist/index
+.mjs:366:19)
+    at createClient (fi
+le:///D:/shramsaathi/ba
+ckend/node_modules/@sup
+abase/supabase-js/dist/
+index.mjs:559:9)
+    at file:///D:/shram
+saathi/backend/src/serv
+ices/supabase.js:8:25
+    at ModuleJob.run (n
+ode:internal/modules/es
+m/module_job:271:25)
+    at async onImport.t
+racePromise.__proto__ (
+node:internal/modules/e
+sm/loader:547:26)
+    at async asyncRunEn
+tryPointWithESMLoader (
+node:internal/modules/r
+un_main:116:5)
+
+Node.js v22.12.0

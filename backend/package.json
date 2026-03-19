@@ -1,0 +1,25 @@
+{
+    "name": "shram-saathi-backend",
+    "version": "1.0.0",
+    "description": "Backend for Shram Saathi",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node --env-file=.env src/index.js",
+        "dev": "node --env-file=.env src/index.js",
+        "seed": "node --env-file=.env scripts/seedSchemes.js"
+    },
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "@supabase/ssr": "^0.5.2",
+        "@supabase/supabase-js": "^2.45.6",
+        "axios": "^1.7.7",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "form-data": "^4.0.1",
+        "multer": "^1.4.5-lts.1",
+        "node-cron": "^3.0.3",
+        "sarvamai": "^0.1.2"
+    }
+}

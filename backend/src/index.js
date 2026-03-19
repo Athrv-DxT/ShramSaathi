@@ -13,8 +13,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Resolve trailing slash CORS issues cleanly
+const safeFrontendUrl = process.env.FRONTEND_URL ? process.env.FRONTEND_URL.replace(/\/$/, "") : '*';
+const allowedOrigins = safeFrontendUrl !== '*' ? [safeFrontendUrl, `${safeFrontendUrl}/`] : '*';
+
 // Middleware
-app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
+app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
 // Routes
